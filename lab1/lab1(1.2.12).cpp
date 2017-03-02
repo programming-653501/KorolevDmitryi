@@ -10,11 +10,11 @@
 #pragma argsused
 int _tmain(int argc, _TCHAR* argv[])
 {
-	int m,i,j;
-	std::cout<<"Type m(Natural number):";
+	int m=0,i,j;
+	std::cout<<"Type m:";
 	std::cin>>m;
 	if(m<1){
-	std::cout<<"Error.";
+	std::cout<<"No numbers found.";
 	getch();
 	return 0;
 	}
