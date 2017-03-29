@@ -1,0 +1,46 @@
+#include <tchar.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include "Unit1.h"
+extern struct Tree* add(struct Tree* head, char* s);
+int compare(char *a, char *b){
+	int i=0;
+	while(a[i]==b[i]&&i<strlen(a)&&i<strlen(b)){
+		i++;
+		}
+	if(a[i]>b[i]||(strlen(a)>strlen(b)&&b[i]==a[i])){
+		return 1;
+	}
+	if(a[i]<b[i]||(strlen(a)<strlen(b)&&b[i]==a[i])){
+		return -1;
+	}
+	return 0;
+}
+
+bool nice(char *s){
+	if(strlen(s)==0){
+		return false;
+	}
+	if(toupper(s[0])==toupper(s[strlen(s)-1])){
+		return true;
+	}
+	return false;
+}
+
+struct Tree* work(char* s, struct Tree* head){
+	char buf[100];
+	int l=0,i=0;
+	while(i<strlen(s)){
+		if(s[i]>-65&&s[i]<0){
+			buf[l++]=toupper(s[i]);
+		}else{
+			buf[l]='\0';
+			l=0;
+			if (nice(buf)) {
+				head=add(head,buf);
+			}
+		}
+		i++;
+	}
+	return head;
+};
