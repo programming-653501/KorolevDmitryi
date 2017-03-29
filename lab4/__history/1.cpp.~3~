@@ -1,0 +1,140 @@
+#include <iostream>
+#include <conio.h>
+#include <stdio.h>
+#include <windows.h>
+
+void out(const char c[10]){
+	for (int i=0; c[i] != '\0'; i++) {
+		std::cout<<c[i];
+	}
+	return;
+}
+
+bool check(int a){
+	if (a<0||a>1001) {
+		std::cout<<"\nЧто-то пошло не так.";
+		getch();
+		return true;
+	}
+	return false;
+}
+
+void delo(int k, const int c){
+	if (check(k)) return ;
+	const char num[10][6]={"","од","дв","тр","четыр","пят","шест","сем","вос","девят"};
+	const char sot1[7][5]={"","сто","ста","сто","ста","ста","ста"};
+	const char sor[7][7]={"","сорок","сорока","сорок","сорока","сорока","сорока"};
+	const char sot2[7][6]={"","сот","сот","сот","стам","стами","стах"};
+	const char desp[7][9]={"","дцать","дцати","дцать","дцати","дцатью","дцати"};
+	const char pad[7][10][5]={
+	"","ин","а","и","е","ь","ь","ь","емь","ь",
+	"","ного","ух","ёх","ёх","и","и","и","ьми","и",
+	"","ин","а","и","е","ь","ь","ь","емь","ь",
+	"","ному","ум","ём","ём","и","и","и","ьми","и",
+	"","им","умя","емя","ьмя","ью","ью","ью","емью","ью",
+	"","ном","ух","ёх","ёх","и","и","и","ьми","и"};
+	const char tis[10][20]={"","одна тысяча","одной тысячи","одну тысячу","одной тысяче","одной тысячей","одной тысяче"};
+	if (k==1000) {
+		std::cout<<tis[c];
+		return;
+	}
+	if(k==100){
+		std::cout<<sot1[c];
+		return;
+	}
+	if(k/100==1) {
+		out(sot1[c]);
+	}
+	else{
+		if(k/100==2&&((c==1)||(с==3))) {
+			out("двести");
+		}else{
+
+				out(num[k/100]);
+				out(pad[c-1][k/100]);
+				if(c==1&&k/100<4){
+					out("ста");
+				}else{
+					out(sot2[c]);
+				}
+
+		}
+	}
+	k=k%100;
+	if(k/10>0){
+		out(" ");
+	}
+	if (k==10) {
+		out("десят");
+		out(pad[c-1][9]);
+		return;
+	}
+	if (k<20&&k>10) {
+		out(num[k%10]);
+		if (k%10==8) {
+			out("ем");
+		}
+		out("на");
+		out(desp[c]);
+		return;
+	}else{
+		if (k>=20&&k<40) {
+			out(num[k/10]);
+			out(pad[0][k/10]);
+			out(desp[c]);
+		}
+		if (k>=40&&k<50) {
+			out(sor[c]);
+		}
+		if (k>49) {
+			out(num[k/10]);
+			out(pad[c-1][k/10]);
+            out("десят");
+			out(pad[c-1][9]);
+		}
+	}
+	k=k%10;
+	if(k==0){
+	return;
+	}else{
+		out(" ");
+	}
+	out(num[k]);
+	out(pad[c-1][k]);
+	return;
+}
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	char s[30];
+	int k=0,i;
+	std::cout<<"Введите число(цифрами), а затем первую(или несколько) букву падежа(ирдвтп):\n";
+	gets(s);
+	for (i = 0; s[i]!='\0'; i++) {
+		if(s[i]>=48&&s[i]<=57) {
+			k=k*10+(s[i]-48);
+		}
+		else {
+			switch(s[i]) {
+			case 'и': delo(k,1); std::cout<<"\n"; break;
+			case 'р': delo(k,2); std::cout<<"\n"; break;
+			case 'в': delo(k,3); std::cout<<"\n"; break;
+			case 'д': delo(k,4); std::cout<<"\n"; break;
+			case 'т': delo(k,5); std::cout<<"\n"; break;
+			case 'п': delo(k,6); std::cout<<"\n"; break;
+			case 'И': delo(k,1); std::cout<<"\n"; break;
+			case 'Р': delo(k,2); std::cout<<"\n"; break;
+			case 'В': delo(k,3); std::cout<<"\n"; break;
+			case 'Д': delo(k,4); std::cout<<"\n"; break;
+			case 'Т': delo(k,5); std::cout<<"\n"; break;
+			case 'П': delo(k,6); std::cout<<"\n"; break;
+			default: continue;
+			}
+		}
+	}
+	getch();
+	return 0;
+}
+
