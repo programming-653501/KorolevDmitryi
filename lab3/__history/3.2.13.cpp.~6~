@@ -1,0 +1,73 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+void Bubble(int i, int m, int j, int n,double** arr,int l){
+	double temp;
+	while ((i<n-1-l)&&(j<m-1-l)){
+			if (arr[i][j]>arr[i+1][j+1]) {
+				temp=arr[i][j];
+				arr[i][j]=arr[i+1][j+1];
+				arr[i+1][j+1]=temp;
+			}
+			i++;
+			j++;
+			}
+	return;
+}
+
+int Min(int a, int b){
+	if (a>b) {
+		return b;
+	}
+	else {
+		return a;
+    }
+}
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	int n,m,min,k,l;
+	int i,j;
+	double** arr;
+	cout<<"Enter the number of rows: ";
+	cin>>n;
+	cout<<"Enter the number of columns: ";
+	cin>>m;
+	arr = new double* [n];
+	cout<<"Enter the elements:\n";
+	for (j = 0; j < n; j++) {
+		arr[j]=new double [m];
+		for (i = 0; i < m; i++) {
+			cin>>arr[j][i];
+		}
+	}
+	min=Min(n,m);
+	for (l = 0; l < min-1; l++) {
+		Bubble(0,m,0,n,arr,l);	
+	}
+	for (k = 1; k < m+n-min; k++) {
+		if (k<n) {
+			for (l = 0; l < Min(min,abs(k-n))-1; l++) {
+				Bubble(k,m,0,n,arr,l);	
+			}
+		}
+		if (k<m) {
+			for (l = 0; l < Min(min,abs(k-m))-1; l++) {
+				Bubble(0,m,k,n,arr,l);	
+			}
+		}
+	}
+	cout<<"Result:";
+	for (i = 0; i < n; i++) {
+		cout<<"\n";
+		for (j = 0; j < m; j++) {
+			cout<<arr[i][j]<<"\t";
+		}
+		delete arr[i];
+	}
+	delete arr;
+	getch();
+	return 0;
+}
+

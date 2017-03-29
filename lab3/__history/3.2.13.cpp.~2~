@@ -1,0 +1,69 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+int _tmain(int argc, _TCHAR* argv[])
+{
+	int n,m,min,max,k,l;
+	int register i,j;
+	double** arr,temp;
+	cout<<"Enter the number of rows: ";
+	cin>>n;
+	cout<<"Enter the number of columns: ";
+	cin>>m;
+	arr = new double* [n];
+	cout<<"Enter the elements:\n";
+	for (j = 0; j < n; j++) {
+		arr[j]=new double [m];
+		for (i = 0; i < m; i++) {
+			cin>>arr[j][i];
+		}
+	}
+	if (n>m) {
+		min=m;
+	}
+	else {
+		min=n;
+	}
+	for (k = 0; k < n; k++) {
+		for (l = 0; l < min-1-k; l++) {
+			i=k;
+			j=0;
+			while (i<n-1-l){
+			if (arr[i][j]>arr[i+1][j+1]) {
+				temp=arr[i][j];
+				arr[i][j]=arr[i+1][j+1];
+				arr[i+1][j+1]=temp;
+			}
+			i++;
+			j++;
+			}	
+		}
+	}
+	for (k = 1; k < m; k++) {
+		for (l = 0; l < min-1-k; l++) {
+			i=0;
+			j=k;
+			while (j<m-1-l){
+			if (arr[i][j]>arr[i+1][j+1]) {
+				temp=arr[i][j];
+				arr[i][j]=arr[i+1][j+1];
+				arr[i+1][j+1]=temp;
+			}
+			i++;
+			j++;
+			}	
+		}
+	}
+	cout<<"Result:";
+	for (i = 0; i < n; i++) {
+		cout<<"\n";
+		for (j = 0; j < m; j++) {
+			cout<<arr[i][j]<<"\t";
+		}
+		delete arr[i];
+	}
+	delete arr;
+	getch();
+	return 0;
+}
+//---------------------------------------------------------------------------
