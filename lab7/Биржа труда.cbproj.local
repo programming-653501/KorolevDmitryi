@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.851,=C:\Users\Master\Documents\RAD Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.121,=C:\Users\Master\Desktop\Getcoded\Proging\lab7\Unit5.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.327,C:\Users\Master\Documents\RAD Studio\Projects\Project1.cbproj=C:\Users\Master\Documents\RAD Studio\Projects\POSLEDNIAIAIAIAIAIAI.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.358,C:\Users\Master\Documents\RAD Studio\Projects\Unit2.cpp=C:\Users\Master\Documents\RAD Studio\Projects\Vacancy.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.537,=C:\Users\Master\Documents\RAD Studio\Projects\Project1.res</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.417,=C:\Users\Master\Desktop\Getcoded\Proging\lab7\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.561,C:\Users\Master\Desktop\Getcoded\Proging\lab7\Client.cpp=C:\Users\Master\Desktop\Getcoded\Proging\lab7\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.190,C:\Users\Master\Documents\RAD Studio\Projects\Vacancy.h=C:\Users\Master\Desktop\Getcoded\Proging\lab7\Vacancy.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.971,C:\Users\Master\Desktop\Getcoded\Proging\lab7\Биржатруда.cbproj=C:\Users\Master\Desktop\Getcoded\Proging\lab7\fin.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.260,C:\Users\Master\Documents\RAD Studio\Projects\Main.cpp=C:\Users\Master\Desktop\Getcoded\Proging\lab7\Main.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.058,=C:\Users\Master\Desktop\Getcoded\Proging\lab7\Unit6.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.890,=C:\Users\Master\Desktop\Getcoded\Proging\lab7\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.512,C:\Users\Master\Documents\RAD Studio\Projects\fin.cbproj=C:\Users\Master\Desktop\Getcoded\Proging\lab7\fin.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.877,C:\Users\Master\Documents\RAD Studio\Projects\POSLEDNIAIAIAIAIAIAI.cbproj=C:\Users\Master\Documents\RAD Studio\Projects\fin.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.561,C:\Users\Master\Desktop\Getcoded\Proging\lab7\Client.h=C:\Users\Master\Desktop\Getcoded\Proging\lab7\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.358,C:\Users\Master\Documents\RAD Studio\Projects\Unit2.h=C:\Users\Master\Documents\RAD Studio\Projects\Vacancy.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.900,C:\Users\Master\Desktop\Getcoded\Proging\lab7\Биржа труда.cbproj=C:\Users\Master\Desktop\Getcoded\Proging\lab7\Биржатруда.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.571,C:\Users\Master\Documents\RAD Studio\Projects\Unit1.dfm=C:\Users\Master\Documents\RAD Studio\Projects\Main.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.260,C:\Users\Master\Documents\RAD Studio\Projects\Main.dfm=C:\Users\Master\Desktop\Getcoded\Proging\lab7\Main.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.316,=C:\Users\Master\Desktop\Getcoded\Proging\lab7\Unit3.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.783,C:\Users\Master\Documents\RAD Studio\Projects\Unit1.h=C:\Users\Master\Documents\RAD Studio\Projects\Baseclass.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.571,C:\Users\Master\Documents\RAD Studio\Projects\Unit1.h=C:\Users\Master\Documents\RAD Studio\Projects\Main.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.673,C:\Users\Master\Documents\RAD Studio\Projects\Baseclass.cpp=C:\Users\Master\Desktop\Getcoded\Proging\lab7\Baseclass.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.260,C:\Users\Master\Documents\RAD Studio\Projects\Main.h=C:\Users\Master\Desktop\Getcoded\Proging\lab7\Main.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.190,C:\Users\Master\Documents\RAD Studio\Projects\Vacancy.cpp=C:\Users\Master\Desktop\Getcoded\Proging\lab7\Vacancy.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.941,=C:\Users\Master\Documents\RAD Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.783,C:\Users\Master\Documents\RAD Studio\Projects\Unit1.cpp=C:\Users\Master\Documents\RAD Studio\Projects\Baseclass.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.612,=C:\Users\Master\Documents\RAD Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.571,C:\Users\Master\Documents\RAD Studio\Projects\Unit1.cpp=C:\Users\Master\Documents\RAD Studio\Projects\Main.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.794,=C:\Users\Master\Desktop\Getcoded\Proging\lab7\Unit4.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.673,C:\Users\Master\Documents\RAD Studio\Projects\Baseclass.h=C:\Users\Master\Desktop\Getcoded\Proging\lab7\Baseclass.h</Transaction>
+    <Transaction>2017.04.27 21:04:14.429,=C:\Users\Master\Desktop\Getcoded\Proging\lab7\Unit7.cpp</Transaction>
+    <Transaction>2017.04.27 21:11:34.067,=C:\Users\Master\Desktop\Getcoded\Proging\lab7\Unit8.cpp</Transaction>
+    <Transaction>2017.04.27 21:22:10.271,=C:\Users\Master\Desktop\Getcoded\Proging\lab7\Unit9.cpp</Transaction>
+  </Transactions>
+</BorlandProject>
