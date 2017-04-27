@@ -1,0 +1,33 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "Vacancy.h"
+
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+
+class Vacansy
+{
+	private: wchar_t *firm, *city, *specialization, *job, *education, *family;
+	int age,salary;
+	enum Sex sex;
+	enum Busyness busyness;
+	public: void vacansy(String f, String c, String s, String j, String e, String fam,
+																int a, Sex se, Busyness b){
+		firm=(wchar_t *)malloc(f.Length()*2);
+		firm=f.w_str();
+		city=(wchar_t *)malloc(c.Length()*2);
+		city=c.w_str();
+		specialization=(wchar_t *)malloc(s.Length()*2);
+		specialization=s.w_str();
+		job=(wchar_t *)malloc(j.Length()*2);
+		job=j.w_str();
+		education=(wchar_t *)malloc(e.Length()*2);
+		education=e.w_str();
+		city=(wchar_t *)malloc(c.Length()*2);
+		city=c.w_str();
+	}
+};

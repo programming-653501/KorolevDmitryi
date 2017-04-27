@@ -1,0 +1,67 @@
+#include "Unit3.cpp"
+#include "Unit5.h"
+#pragma hdrstop
+
+#include "Main.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+extern struct VList* vlist;
+extern struct CList* clist;
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::Button1Click(TObject *Sender)
+{
+	Form2->Show();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button2Click(TObject *Sender)
+{
+	Form4->Show();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button3Click(TObject *Sender)
+{
+	Form3->Show(); Form3->ComboBox1->ItemIndex=-1;
+	Form3->ComboBox1->Text="Выберите соискателя";
+
+	Form3->ComboBox1->Items->Clear();
+	String Temp;
+	struct CList* ctemp=clist;
+	while(ctemp!=NULL){
+		Temp=ctemp->cl->Name();
+		Temp+=", ";
+		Temp+=ctemp->cl->Contacts();
+		Form3->ComboBox1->Items->Add(Temp);
+		ctemp=ctemp->next;
+	}
+	return;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button4Click(TObject *Sender)
+{
+	Form5->Show();  Form5->ComboBox1->ItemIndex=-1;
+	Form5->ComboBox1->Text="Выберите вакансию";
+
+	Form5->ComboBox1->Items->Clear();
+	String Temp;
+	struct VList* vtemp=vlist;
+	while(vtemp!=NULL){
+		Temp=vtemp->vac->Firm();
+		Temp+=", ";
+		Temp+=vtemp->vac->Job();
+		Form5->ComboBox1->Items->Add(Temp);
+		vtemp=vtemp->next;
+	}
+	return;
+}
+//---------------------------------------------------------------------------
+
