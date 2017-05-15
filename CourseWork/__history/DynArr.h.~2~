@@ -1,0 +1,62 @@
+#ifndef DynArrH
+#define DynArrH DynArr
+
+#include "Cell.h"
+#include "AllPositions.h"
+#include "CW.h"
+#include "Libs.h"
+
+class DynArr {
+	private :
+
+	int param, maxnum, size;
+
+	class Chosen {
+		private :
+
+		char r;
+
+		public :
+
+		bool can ( int k );
+
+		void toone ( int k );
+
+		void tonul ( int k );
+
+	} * ChosenWords;
+	class CW crossw;
+	class Cell *** q;
+
+	int Max ( int a, int b );
+
+	void Reallocate ( );
+
+	class Cell * cell ( int a, int b );
+
+	void Erase ( int a, int b, wchar_t * w, char c, int n );
+
+	void PosWord ( int a, int b, wchar_t * w, char c, int n );
+
+	bool CanPos ( int a, int b, wchar_t * w, char c, int n );
+
+	void QSort ( struct AllPositions * arr, int beg, int end );
+
+	struct AllPositions * FindAllPositions ( wchar_t * w, bool param );
+
+	bool Generate ( wchar_t ** arrs, int curr );
+
+	public :
+
+	DynArr ( );
+
+	~DynArr ( );
+
+	bool AddOneMoreWord ( wchar_t * word, int param );
+
+	bool GenerateFirst ( wchar_t ** arrs, int Maxnum, int Param );
+
+	wchar_t ** Show ( int & rows, int & cols );
+};
+
+#endif

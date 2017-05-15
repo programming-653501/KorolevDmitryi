@@ -1,0 +1,100 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "MainForm.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+wchar_t ** words;
+int amount;
+class DynArr * arr;
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::GenerateClick(TObject *Sender)
+{
+	if ( WordLabel -> Visible == false) {
+		WordLabel -> Visible = true;
+		WordAmount -> Visible = true;
+		Generate -> Caption = "ОК";
+		OpenForm2 -> Visible = false;
+		return;
+	} else {
+		if ( WordAmount -> Visible == true ) {
+			if ( IsInt ( WordAmount -> Text ) ) {
+				WordLabel -> Caption = "Заполните таблицу словами и выберите размер кроссворда";
+				WordAmount -> Visible = false;
+				int am = WordAmount -> Text.ToInt ( );
+				Words -> RowCount = am;
+				Words -> Visible = true;
+				Words -> Height = ( am > 10 ) ? 280 : ( am * 27 );
+				Words -> Width = ( am > 10 ) ? 321 : ( 304 );
+				CWSize -> Visible = true;
+				CWSize -> ItemIndex = 1;
+			} else {
+				ShowMessage ( "Введите натуральное число слов" );
+				return;
+            }
+		} else {
+		   	if ( words ) {
+			/*	for ( int i = 0; i < amount; i++) {
+					delete words[i];
+				}  */
+				delete words;
+				words = NULL;
+			}
+			if ( arr ) {
+				delete arr;
+				arr = NULL;
+			}
+			amount = WordAmount -> Text.ToInt ( );
+			words = new wchar_t * [amount];
+			for ( int i = 0; i < amount; i++) {
+				words[i] = Words -> Cells[0][i].w_str ( );
+			}
+			arr = new DynArr ( );
+			if ( !arr -> GenerateFirst ( words, amount, CWSize -> ItemIndex - 1 ) ) {
+				ShowMessage ( "Не удалось сгенерировать кроссворд" );
+				delete arr;
+				arr = NULL;
+			}
+			CWSize -> Visible = false;
+			WordLabel -> Visible = false;
+			Words -> Visible = false;
+			Generate -> Caption = "Сгенерировать кроссворд";
+			OpenForm2 -> Visible = true;
+        }
+    }
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::OpenForm2Click(TObject *Sender)
+{
+	if ( !arr ) {
+		ShowMessage ( "Пока нечего просматривать" );
+		return;
+	}
+	Form2 -> Show ( );
+	int cols, rows;
+	wchar_t ** grid;
+	grid = arr -> Show ( rows, cols );
+	Form2 -> Showcw -> ColCount = cols;
+	Form2 -> Showcw -> FixedCols = 0;
+	Form2 -> Showcw -> RowCount = rows;
+	Form2 -> Showcw -> FixedRows = 0;
+	for ( int i = 0; i < rows; i++) {
+		for ( int j = 0; j < cols; j++) {
+			Form2 -> Showcw -> Cells[j][rows - i - 1] = grid[i][j];
+		}
+		delete grid[i];
+	}
+	delete grid;
+}
+//---------------------------------------------------------------------------
+
