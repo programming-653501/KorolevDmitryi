@@ -11,6 +11,7 @@ TForm1 *Form1;
 wchar_t ** words;
 int amount;
 class DynArr * arr;
+bool arrmodif = false;
 //---------------------------------------------------------------------------
 __fastcall TForm1::TForm1(TComponent* Owner)
 	: TForm(Owner)
@@ -62,7 +63,9 @@ void __fastcall TForm1::GenerateClick(TObject *Sender)
 				delete arr;
 				arr = NULL;
 			} else {
-				ShowMessage ( "Успешно" );
+			   //	ShowMessage ( "Успешно" );
+				arrmodif = true;
+				OpenForm2Click ( Sender );
             }
 			WordLabel -> Visible = false;
 			Words -> Visible = false;
@@ -82,25 +85,31 @@ void __fastcall TForm1::OpenForm2Click(TObject *Sender)
 		ShowMessage ( "Пока нечего просматривать" );
 		return;
 	}
-	Form2 -> Showcw -> Height = Form2 -> Height - 55;
-	Form2 -> Showcw -> Width = Form2 -> Width - 15;
-	int cols, rows;
-	wchar_t ** grid;
-	grid = arr -> Show ( rows, cols );     
-	Form2 -> Showcw -> ColCount = cols;
-	Form2 -> Showcw -> FixedCols = 0;
-	Form2 -> Showcw -> RowCount = rows;
-	Form2 -> Showcw -> FixedRows = 0;
-	Form2 -> Showcw -> Visible = false;
-	for ( int i = 0; i < rows; i++) {
-		for ( int j = 0; j < cols; j++) {
-			Form2 -> Showcw -> Cells[j][rows - i - 1] = grid[i][j];
-		}
-		delete grid[i];
-	}
-	Form2 -> Showcw -> Visible = true;
 	Form2 -> Show ( );
-	delete grid;
+	Form2 -> Showcw -> Height = Form2 -> Height - 36;
+	Form2 -> Showcw -> Width = Form2 -> Width - 16;
+	Form2 -> Close ( );
+	if ( arrmodif ){
+	   /*	Form2 -> Showcw -> Height = Form2 -> Height - 36;
+		Form2 -> Showcw -> Width = Form2 -> Width - 16;      */
+		int cols, rows;
+		wchar_t ** grid;
+		grid = arr -> Show ( rows, cols );
+		Form2 -> Showcw -> ColCount = cols;
+		Form2 -> Showcw -> FixedCols = 0;
+		Form2 -> Showcw -> RowCount = rows;
+		Form2 -> Showcw -> FixedRows = 0;
+		for ( int i = 0; i < rows; i++) {
+			for ( int j = 0; j < cols; j++) {
+				Form2 -> Showcw -> Cells[j][rows - i - 1] = grid[i][j];
+			}
+			delete grid[i];
+		}
+		Form2 -> Showcw -> Visible = true;
+		arrmodif = false;
+		delete grid;
+	}
+	Form2 -> Show ( );
 }
 //---------------------------------------------------------------------------
 
@@ -129,15 +138,17 @@ void __fastcall TForm1::FileButtonClick(TObject *Sender)
 				words[i] = new wchar_t [Memof -> Lines -> operator[] ( i ).Length ( ) + 1];
 				wcscpy( words[i], Memof -> Lines -> operator[] ( i ).w_str ( ) );
 			}
-			arr = new DynArr ( );  
+			arr = new DynArr ( );
 			if ( !arr -> GenerateFirst ( words, amount, CWSize -> ItemIndex - 1 ) ) {
 				ShowMessage ( "Не удалось сгенерировать кроссворд" );
 				delete arr;
 				arr = NULL;
 			} else {
-                ShowMessage ( "Успешно" );
-            }
-		}   	
+				//	ShowMessage ( "Успешно" );
+				arrmodif = true;
+				OpenForm2Click ( Sender );
+			}
+		}
 		Generate -> Visible = true;
 		OpenForm2 -> Visible = true;
 		StopBut -> Visible = false;

@@ -57,6 +57,7 @@
 			}
 		}
 		ChosenWords = NULL;
+		crossw = new CW ( );
 		return;
 	}
 
@@ -69,6 +70,7 @@
 		}
 		free ( q );
 		delete ChosenWords;
+		delete crossw;
 		return;
 	}
 
@@ -95,9 +97,8 @@
 	void DynArr :: Erase ( int a, int b, wchar_t * w, char c, int n ) { // whereX, whereY, word, h if horizontal, beging symbol
 		class Cell * cl;
 		int len = wcslen ( w );
-		crossw.DeleteWord ( );
+		crossw -> DeleteWord ( );
 		if ( c == 'h' ) {
-
 			cell ( a - 1 - n, b ) -> clear ( );
 			cell ( a + len - n, b ) -> clear ( );
 			for ( int i = a - n; i < a + len - n; i++ ) {
@@ -120,7 +121,7 @@
 	void DynArr :: PosWord ( int a, int b, wchar_t * w, char c, int n ) { // whereX, whereY, word, h if horizontal, begining symbol
 		class Cell * cl;
 		int len = wcslen ( w );
-		crossw.AddWord ( a - ( ( c == 'h' ) ? n : 0 ) , b + ( ( c == 'v' ) ? n : 0 ) , w, c );
+		crossw -> AddWord ( a - ( ( c == 'h' ) ? n : 0 ) , b + ( ( c == 'v' ) ? n : 0 ) , w, c );
 		if ( c == 'h' ) {
 			for ( int i = a - n; i < a + len - n; i++ ) {
 				cell ( i, b - 1 ) -> NoH ( );
@@ -174,15 +175,14 @@
 
 	struct AllPositions * DynArr :: FindAllPositions ( wchar_t * w, bool param ) { // word, posedwords, amount of posed words, sort or no
 		struct AllPositions * out;
-		struct CROSSWORD * cw = crossw.GetCrs ( );
-		int num = crossw.GetWordsNow ( );
+		struct CROSSWORD * cw = crossw -> GetCrs ( );
+		int num = crossw -> GetWordsNow ( );
 		out = CreateAP ( );
 		int sizeofarr = STARTALLPOS, len = wcslen ( w );
 		for ( int i = 0; i < len; i++ ) {
 			for ( int j = 0; j < num; j++ ) {
 				for ( int k = 0; k < wcslen ( cw[j].word ); k++ ) {
 					if ( cw[j].word[k] == w[i] ) {
-
 						char c;
 						if ( cw[j].horver == 'h' ) {
 							c = 'v';
@@ -198,7 +198,7 @@
 							out -> x[a] = cw[j].x + k * ( ( c == 'v' ) ? 1 : 0 );
 							out -> y[a] = cw[j].y - k * ( ( c == 'v' ) ? 0 : 1 );
 							out -> n[a] = i;
-							out -> distance[a] = crossw.Distance ( ( ( c == 'v' ) ? out -> x[a] : ( out -> x[a] - i ) ) , ( ( c == 'v' ) ? ( out -> y[a] + i ) : ( out -> x[a] - i ) ) );
+							out -> distance[a] = crossw -> Distance ( ( ( c == 'v' ) ? out -> x[a] : ( out -> x[a] - i ) ) , ( ( c == 'v' ) ? ( out -> y[a] + i ) : ( out -> x[a] - i ) ) );
 							out -> c[ ( out -> amount ) ++] = c;
 						}
 
@@ -233,10 +233,7 @@
 	bool DynArr :: GenerateFirst ( wchar_t ** Arrs, int Maxnum, int Param ) {
 		param = Param;
 		maxnum = Maxnum;
-		arrs = Arrs;PosWord ( 0, 0, arrs[0], 'h', 0 );
-		if( maxnum == 1 ){
-			return true;
-		}
+		arrs = Arrs;
 		if ( ChosenWords ) {
 			delete ChosenWords;
 		}
@@ -255,7 +252,9 @@
 				minus++;
 			}
 		}
-		ChosenWords[0].toone ( 0 );
+		if( maxnum == 1 + minus ){
+			return true;
+		}
 		return Generate ( minus + 1 );
 	}
 
@@ -303,7 +302,7 @@
 
 	wchar_t ** DynArr :: Show ( int & rows, int & cols ) {
 		int xr, xl, yr, yl;
-		crossw.GetCoordinates ( xl, yl, xr, yr );
+		crossw -> GetCoordinates ( xl, yl, xr, yr );
 		cols = xr - xl + 1;
 		rows = yl - yr + 1;
 		wchar_t ** out = new wchar_t * [rows];

@@ -34,7 +34,7 @@ class DynArr {
         }
 
 	} * ChosenWords;
-	class CW crossw;
+	class CW * crossw;
 	class Cell *** q;
 
 	int Max ( int a, int b );

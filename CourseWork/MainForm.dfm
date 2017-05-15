@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 0
-  Top = 0
+  Left = 293
+  Top = 274
   Caption = #1043#1077#1085#1077#1088#1072#1090#1086#1088' '#1082#1088#1086#1089#1089#1074#1086#1088#1076#1086#1074
   ClientHeight = 296
   ClientWidth = 726
@@ -11,6 +11,7 @@ object Form1: TForm1
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poDesktopCenter
   OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13

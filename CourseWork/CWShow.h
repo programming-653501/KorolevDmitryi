@@ -13,7 +13,6 @@ class TForm2 : public TForm
 {
 __published:	// IDE-managed Components
 	TStringGrid *Showcw;
-	void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm2(TComponent* Owner);

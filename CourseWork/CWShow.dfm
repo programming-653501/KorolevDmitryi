@@ -2,8 +2,8 @@ object Form2: TForm2
   Left = 0
   Top = 0
   Caption = #1055#1088#1086#1089#1084#1086#1090#1088' '#1082#1088#1086#1089#1089#1074#1086#1088#1076#1072
-  ClientHeight = 700
-  ClientWidth = 1300
+  ClientHeight = 619
+  ClientWidth = 1297
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,15 +11,16 @@ object Form2: TForm2
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poDesktopCenter
   WindowState = wsMaximized
-  OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13
   object Showcw: TStringGrid
     Left = 0
     Top = 0
-    Width = 1305
-    Height = 705
+    Width = 1225
+    Height = 537
+    ColCount = 10000
     DefaultColWidth = 15
     DefaultRowHeight = 15
     RowCount = 10000

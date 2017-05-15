@@ -14,9 +14,4 @@ __fastcall TForm2::TForm2(TComponent* Owner)
 {
 }
 //---------------------------------------------------------------------------
-void __fastcall TForm2::FormClose(TObject *Sender, TCloseAction &Action)
-{
-	Showcw -> Visible = false;
-}
-//---------------------------------------------------------------------------
 
