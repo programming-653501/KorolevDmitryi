@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.621,=C:\Users\Master\Documents\RAD Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.683,=C:\Users\Master\Documents\RAD Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.848,=C:\Users\Master\Documents\RAD Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.761,=C:\Users\Master\Documents\RAD Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.479,C:\Users\Master\Documents\RAD Studio\Projects\AllPositions.h=C:\Users\Master\Documents\RAD Studio\Projects\Unit2.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.324,C:\Users\Master\Desktop\Getcoded\CourseWork\CWShow.cpp=C:\Users\Master\Desktop\Getcoded\CourseWork\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.700,C:\Users\Master\Documents\RAD Studio\Projects\Cell.cpp=C:\Users\Master\Documents\RAD Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.364,C:\Users\Master\Desktop\Getcoded\CourseWork\Cell.cpp=C:\Users\Master\Documents\RAD Studio\Projects\Cell.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.290,C:\Users\Master\Documents\RAD Studio\Projects\DynArr.h=C:\Users\Master\Documents\RAD Studio\Projects\Unit2.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.048,C:\Users\Master\Desktop\Getcoded\CourseWork\MainForm.h=C:\Users\Master\Documents\RAD Studio\Projects\MainForm.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.472,C:\Users\Master\Desktop\Getcoded\CourseWork\DynArr.cpp=C:\Users\Master\Documents\RAD Studio\Projects\DynArr.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.048,C:\Users\Master\Desktop\Getcoded\CourseWork\MainForm.cpp=C:\Users\Master\Documents\RAD Studio\Projects\MainForm.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.290,C:\Users\Master\Documents\RAD Studio\Projects\DynArr.cpp=C:\Users\Master\Documents\RAD Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.563,C:\Users\Master\Desktop\Getcoded\CourseWork\Генератор кроссвордов.cbproj=C:\Users\Master\Desktop\Getcoded\CourseWork\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.358,=C:\Users\Master\Desktop\Getcoded\CourseWork\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.739,C:\Users\Master\Desktop\Getcoded\CourseWork\AllPositions.cpp=C:\Users\Master\Documents\RAD Studio\Projects\AllPositions.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.048,C:\Users\Master\Desktop\Getcoded\CourseWork\MainForm.dfm=C:\Users\Master\Documents\RAD Studio\Projects\MainForm.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.324,C:\Users\Master\Desktop\Getcoded\CourseWork\CWShow.h=C:\Users\Master\Desktop\Getcoded\CourseWork\Unit2.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.192,C:\Users\Master\Desktop\Getcoded\CourseWork\CW.cpp=C:\Users\Master\Documents\RAD Studio\Projects\CW.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.364,C:\Users\Master\Desktop\Getcoded\CourseWork\Cell.h=C:\Users\Master\Documents\RAD Studio\Projects\Cell.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.087,C:\Users\Master\Documents\RAD Studio\Projects\MainForm.h=C:\Users\Master\Documents\RAD Studio\Projects\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.700,C:\Users\Master\Documents\RAD Studio\Projects\Cell.h=C:\Users\Master\Documents\RAD Studio\Projects\Unit2.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.739,C:\Users\Master\Desktop\Getcoded\CourseWork\AllPositions.h=C:\Users\Master\Documents\RAD Studio\Projects\AllPositions.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.192,C:\Users\Master\Desktop\Getcoded\CourseWork\CW.h=C:\Users\Master\Documents\RAD Studio\Projects\CW.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.731,=C:\Users\Master\Documents\RAD Studio\Projects\File2.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.087,C:\Users\Master\Documents\RAD Studio\Projects\MainForm.dfm=C:\Users\Master\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.991,C:\Users\Master\Desktop\Getcoded\CourseWork\Libs.h=C:\Users\Master\Documents\RAD Studio\Projects\Libs.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.742,C:\Users\Master\Desktop\Getcoded\CourseWork\Project1.cbproj=C:\Users\Master\Documents\RAD Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.826,=C:\Users\Master\Documents\RAD Studio\Projects\Project1.res</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.561,C:\Users\Master\Documents\RAD Studio\Projects\Libs.h=C:\Users\Master\Documents\RAD Studio\Projects\File2.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.479,C:\Users\Master\Documents\RAD Studio\Projects\AllPositions.cpp=C:\Users\Master\Documents\RAD Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.977,C:\Users\Master\Documents\RAD Studio\Projects\CW.cpp=C:\Users\Master\Documents\RAD Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.324,C:\Users\Master\Desktop\Getcoded\CourseWork\CWShow.dfm=C:\Users\Master\Desktop\Getcoded\CourseWork\Unit2.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.087,C:\Users\Master\Documents\RAD Studio\Projects\MainForm.cpp=C:\Users\Master\Documents\RAD Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.977,C:\Users\Master\Documents\RAD Studio\Projects\CW.h=C:\Users\Master\Documents\RAD Studio\Projects\Unit2.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.472,C:\Users\Master\Desktop\Getcoded\CourseWork\DynArr.h=C:\Users\Master\Documents\RAD Studio\Projects\DynArr.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.076,=C:\Users\Master\Documents\RAD Studio\Projects\Unit1.cpp</Transaction>
+  </Transactions>
+</BorlandProject>
